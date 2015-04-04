@@ -1,45 +1,290 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title – приложение ASP.NET</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    <title>English Train</title>
+    @*@Styles.Render("~/Content/css")*@
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.dropotron.min.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/skel-layers.min.js"></script>
+    <script src="~/Scripts/init.js"></script>
+    <noscript>
+        <link href="~/Content/skel.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+        <link href="~/Content/style-desktop.css" rel="stylesheet" />
+    </noscript>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", null, new { @class = "navbar-brand" })
+<body class="no-sidebar">
+
+    <!-- Header -->
+    <div id="header-wrapper" class="wrapper">
+        <div id="header">
+
+            <!-- Logo -->
+            <div id="logo">
+                <h1><a href="javascript://">English Train</a></h1>
+                <p>Инновационный ресурс для изучения английского языка</p>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
-                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li class="current"><a href="index.html">Обучение</a></li>
+                    <li><a href="left-sidebar.html">Мои слова</a></li>
+                    <li><a href="right-sidebar.html">Мои фильмы</a></li>
+                    <li><a href="no-sidebar.html">Мои книги</a></li>
+                    <li>
+                        <a href="">Настройки</a>
+                        <ul>
+                            <li><a href="#">Аккаунт</a></li>
+                            <li><a href="#">Уровень</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <div id="intro-wrapper" class="wrapper style1">
+        <div class="title">Как это работает</div>
+        <section id="intro" class="container">
+            <p class="style1">Мы хорошо помним только то, с чем встречаемся каждый день</p>
+            <p class="style2">
+                Новости, фильмы, песни <br class="mobile-hide" />
+                для любго уровня
+            </p>
+            <p class="style3">
+                Английский нужно учить каждый день. Повторять новые слова, встречая их в новостях.
+                Смотреть фильмы, которые доступны для твоего уровня.
+                Слушать песни, которые нравятся.
+            </p>
+            <ul class="actions">
+                <li><a href="#" class="button style3 big">Начать</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Main -->
+    <div class="wrapper style2">
+        <div class="title">Что мы предлагаем</div>
+        <div id="main" class="container">
+
+            @*<!-- Image -->
+            <a href="#" class="image featured">
+                <img src="images/pic01.jpg" alt="" />
+            </a>*@
+
+            <!-- Features -->
+            <section id="features">
+                <header class="style1">
+                    <h2>English Train Features</h2>
+                    <p>или что вы можете делать на нашем сайте</p>
+                </header>
+                <div class="feature-list">
+                    <div class="row">
+                        <div class="6u">
+                            <section>
+                                <h3 class="icon fa-comment">Mattis velit diam vulputate</h3>
+                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                            </section>
+                        </div>
+                        <div class="6u">
+                            <section>
+                                <h3 class="icon fa-refresh">Lorem ipsum dolor sit veroeros</h3>
+                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="6u">
+                            <section>
+                                <h3 class="icon fa-picture-o">Pretium phasellus justo lorem</h3>
+                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                            </section>
+                        </div>
+                        <div class="6u">
+                            <section>
+                                <h3 class="icon fa-cog">Tempus sed pretium orci</h3>
+                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="6u">
+                            <section>
+                                <h3 class="icon fa-wrench">Aliquam consequat et feugiat</h3>
+                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                            </section>
+                        </div>
+                        <div class="6u">
+                            <section>
+                                <h3 class="icon fa-check">Dolore laoreet aliquam mattis</h3>
+                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <ul class="actions actions-centered">
+                    <li><a href="#" class="button style1 big">Get Started</a></li>
+                    <li><a href="#" class="button style2 big">More Info</a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="wrapper style3">
+        <div class="title">The Endorsements</div>
+        <div id="highlights" class="container">
+            <div class="row 150%">
+                <div class="4u">
+                    <section class="highlight">
+                        <a href="#" class="image featured">
+                            <img src="images/pic02.jpg" alt="" /></a>
+                        <h3><a href="#">Aliquam diam consequat</a></h3>
+                        <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button style1">Learn More</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="4u">
+                    <section class="highlight">
+                        <a href="#" class="image featured">
+                            <img src="images/pic03.jpg" alt="" /></a>
+                        <h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+                        <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button style1">Learn More</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="4u">
+                    <section class="highlight">
+                        <a href="#" class="image featured">
+                            <img src="images/pic04.jpg" alt="" /></a>
+                        <h3><a href="#">Mattis tempus lorem</a></h3>
+                        <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button style1">Learn More</a></li>
+                        </ul>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
-        </footer>
+
+    <!-- Footer -->
+    <div id="footer-wrapper" class="wrapper">
+        <div class="title">The Rest Of It</div>
+        <div id="footer" class="container">
+            <header class="style1">
+                <h2>Ipsum sapien elementum portitor?</h2>
+                <p>
+                    Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
+                    Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
+                </p>
+            </header>
+            <hr />
+            <div class="row 150%">
+                <div class="6u">
+
+                    <!-- Contact Form -->
+                    <section>
+                        <form method="post" action="#">
+                            <div class="row 50%">
+                                <div class="6u">
+                                    <input type="text" name="name" id="contact-name" placeholder="Name" />
+                                </div>
+                                <div class="6u">
+                                    <input type="text" name="email" id="contact-email" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="row 50%">
+                                <div class="12u">
+                                    <textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="12u">
+                                    <ul class="actions">
+                                        <li>
+                                            <input type="submit" class="style1" value="Send" /></li>
+                                        <li>
+                                            <input type="reset" class="style2" value="Reset" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+
+                </div>
+                <div class="6u">
+
+                    <!-- Contact -->
+                    <section class="feature-list small">
+                        <div class="row">
+                            <div class="6u">
+                                <section>
+                                    <h3 class="icon fa-home">Mailing Address</h3>
+                                    <p>
+                                        Untitled Corporation<br />
+                                        1234 Somewhere Rd #987<br />
+                                        Nashville, TN 00000-0000
+                                    </p>
+                                </section>
+                            </div>
+                            <div class="6u">
+                                <section>
+                                    <h3 class="icon fa-comment">Social</h3>
+                                    <p>
+                                        <a href="#">untitled-corp</a><br />
+                                        <a href="#">linkedin.com/untitled</a><br />
+                                        <a href="#">facebook.com/untitled</a>
+                                    </p>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="6u">
+                                <section>
+                                    <h3 class="icon fa-envelope">Email</h3>
+                                    <p>
+                                        <a href="#">info@untitled.tld</a>
+                                    </p>
+                                </section>
+                            </div>
+                            <div class="6u">
+                                <section>
+                                    <h3 class="icon fa-phone">Phone</h3>
+                                    <p>
+                                        (000) 555-0000
+                                    </p>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div id="copyright">
+            <ul>
+                <li>&copy; Untitled</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderBody()
     @RenderSection("scripts", required: false)
 </body>
 </html>
