@@ -1,0 +1,13 @@
+﻿<% for(var i=0 ;i<EntityChanges.length;i++){ %>
+    <p>Тип изменения: <%= EntityChanges[i].Action%></p>
+    <p>Тип объекта: <%= EntityChanges[i].EntityType%></p>
+    <p>Id объекта: <%= EntityChanges[i].Id%></p>
+
+    <%if(EntityChanges[i].Action == 'Modified') {%>
+    <p>
+    <% for(var j=0 ;j<EntityChanges[i].PropertyChanges.length;j++){ %>
+    <%= EntityChanges[i].PropertyChanges[j].Name%>,
+    <% } %>
+    </p>
+    <% } %>
+<% } %>

@@ -319,6 +319,9 @@
 
 
     @RenderBody()
+    <script src="@Scripts.Url("~/bundles/templates")"></script>
+    @Scripts.Render("~/bundles/lib")
+    @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
 </body>
 </html>

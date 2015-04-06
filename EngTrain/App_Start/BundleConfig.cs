@@ -1,27 +1,62 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Optimization;
+using TemplateBuilder;
 
 namespace EngTrain
 {
+    public class BundleOrderer : IBundleOrderer
+    {
+        public virtual IEnumerable<BundleFile> OrderFiles(BundleContext context, IEnumerable<BundleFile> files)
+        {
+            var groups = files.GroupBy(x =>
+            {
+                var index = x.IncludedVirtualPath.IndexOf("\\");
+                if (index > 0) return x.IncludedVirtualPath.Substring(0, index);
+                return x.IncludedVirtualPath;
+
+            });
+
+            List<BundleFile> result = new List<BundleFile>(files.Count());
+            foreach (var group in groups)
+            {
+                result.AddRange(group.OrderBy(x => x.VirtualFile.VirtualPath));
+            }
+
+            return result;
+        }
+    }
+
     public class BundleConfig
     {
         // Дополнительные сведения об объединении см. по адресу: http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/bundles/lib").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/underscore.js",
+                "~/Scripts/backbone.js",
+                "~/Scripts/backbone.marionette.js"
+                ));
 
-            // Используйте версию Modernizr для разработчиков, чтобы учиться работать. Когда вы будете готовы перейти к работе,
-            // используйте средство построения на сайте http://modernizr.com, чтобы выбрать только нужные тесты.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            var templates = new Bundle("~/bundles/templates", new JsMinify()).IncludeDirectory("~/Scripts/backbone/", "*.html", true);
+            templates.Builder = new UndrescoreTemplatesBundler("~/Scripts/backbone/");
+            bundles.Add(templates);
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+            var appBundle = new ScriptBundle("~/bundles/app")
+                .IncludeDirectory("~/Scripts/backbone/config", "*.js", true)
+                .Include("~/Scripts/backbone/app.js")
+                .IncludeDirectory("~/Scripts/backbone/controllers", "*.js", true)
+                .IncludeDirectory("~/Scripts/backbone/views", "*.js", true)
+                .IncludeDirectory("~/Scripts/backbone/entities", "*.js", true)
+                .IncludeDirectory("~/Scripts/backbone/components", "*.js", true)
+                .IncludeDirectory("~/Scripts/backbone/apps", "*.js", true);
+
+            appBundle.Orderer = new BundleOrderer();
+
+            bundles.Add(appBundle);
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
