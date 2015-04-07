@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+﻿@charset 'UTF-8';
 @import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900');
 @import url('font-awesome.min.css');
 
@@ -868,3 +868,15 @@
 			{
 				color: #fff;
 			}
+
+.level-check {
+    padding-left: 15px;
+    color: green;
+    display:none;
+}
+.level-description {
+    cursor:pointer;
+}
+.selected .level-check {
+    display: inline-block;
+}
