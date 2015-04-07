@@ -1,14 +1,13 @@
-﻿App.module("HeaderApp", function (HeaderApp, App, Backbone, Marionette, $, _) {
-    "use strict";
-    this.startWithParent = false;
+﻿App.module('HeaderApp', function (HeaderApp, App, Backbone, Marionette, $, _) {
+    'use strict';
 
     var API = {
-        list: function () {
-            new HeaderApp.List.Controller({ region: App.headerRegion });
+        show: function () {
+            new HeaderApp.Show.Controller({ region: App.headerRegion });
         }
     };
 
-    HeaderApp.on("start", function () {
-        API.list();
+    App.addInitializer(function () {
+        //API.show();
     });
 });

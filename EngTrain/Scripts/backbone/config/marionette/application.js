@@ -3,7 +3,7 @@
 
     _.extend(Marionette.Application.prototype, {
 
-        navigate: function (route, options) {            
+        navigate: function (route, options) {
             options || (options = {});
             Backbone.history.navigate(route, options);
         },
@@ -16,7 +16,7 @@
 
         startHistory: function () {
             if (Backbone.history) {
-                Backbone.history.start();
+                Backbone.history.start({ pushState: true });
             }
         },
 

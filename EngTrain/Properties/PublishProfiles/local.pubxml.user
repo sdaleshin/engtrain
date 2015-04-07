@@ -6,14 +6,20 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>http://localhost/</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\EngTrainPublish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>04/04/2015 15:34:44</publishTime>
     </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>04/04/2015 15:34:44</publishTime>
+    </File>
     <File Include="bin/EngTrain.dll">
-      <publishTime>04/04/2015 15:47:51</publishTime>
+      <publishTime>04/07/2015 15:50:36</publishTime>
+    </File>
+    <File Include="bin/EngTrain.pdb">
+      <publishTime>04/07/2015 15:50:36</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/04/2015 15:34:50</publishTime>
@@ -118,7 +124,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2015 15:34:46</publishTime>
     </File>
     <File Include="bin/ru/System.Web.Optimization.resources.dll">
-      <publishTime>04/04/2015 15:34:47</publishTime>
+      <publishTime>04/06/2015 14:51:17</publishTime>
     </File>
     <File Include="bin/ru/System.Web.Razor.resources.dll">
       <publishTime>04/04/2015 15:34:45</publishTime>
@@ -148,7 +154,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2015 15:34:43</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>04/04/2015 15:34:42</publishTime>
+      <publishTime>04/06/2015 14:51:13</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>04/04/2015 15:34:42</publishTime>
@@ -162,6 +168,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/System.Web.WebPages.Razor.dll">
       <publishTime>04/04/2015 15:34:43</publishTime>
     </File>
+    <File Include="bin/TemplateBuilder.dll">
+      <publishTime>04/06/2015 14:51:30</publishTime>
+    </File>
+    <File Include="bin/TemplateBuilder.pdb">
+      <publishTime>04/06/2015 14:51:30</publishTime>
+    </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>04/04/2015 15:34:45</publishTime>
     </File>
@@ -171,11 +183,68 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap.min.css">
       <publishTime>04/04/2015 15:34:31</publishTime>
     </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/ie/backgroundsize.min.htc">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/ie/html5shiv.js">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/ie/PIE.htc">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/ie/v8.css">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/images/overlay.png">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/images/shadow.png">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/images/Thumbs.db">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
     <File Include="Content/Site.css">
       <publishTime>04/04/2015 15:34:50</publishTime>
     </File>
+    <File Include="Content/skel.css">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/style-1000px.css">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/style-desktop.css">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/style-mobile.css">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>04/04/2015 16:52:14</publishTime>
+    </File>
     <File Include="favicon.ico">
       <publishTime>04/04/2015 15:34:20</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>04/04/2015 16:42:53</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>04/04/2015 16:42:54</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>04/04/2015 16:42:54</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>04/04/2015 16:42:54</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>04/04/2015 16:42:54</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>04/04/2015 16:42:53</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>04/04/2015 15:34:31</publishTime>
@@ -192,14 +261,197 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>04/04/2015 15:34:20</publishTime>
     </File>
+    <File Include="Images/banner.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic01.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic02.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic03.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic04.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic05.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic06.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic07.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic08.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic09.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
+    <File Include="Images/pic10.jpg">
+      <publishTime>04/04/2015 16:48:14</publishTime>
+    </File>
     <File Include="packages.config">
-      <publishTime>04/04/2015 15:35:01</publishTime>
+      <publishTime>04/06/2015 15:12:25</publishTime>
+    </File>
+    <File Include="Scripts/backbone.js">
+      <publishTime>04/06/2015 15:12:25</publishTime>
+    </File>
+    <File Include="Scripts/backbone.marionette.js">
+      <publishTime>04/06/2015 15:12:25</publishTime>
+    </File>
+    <File Include="Scripts/backbone.marionette.min.js">
+      <publishTime>04/06/2015 15:12:25</publishTime>
+    </File>
+    <File Include="Scripts/backbone.min.js">
+      <publishTime>04/06/2015 15:12:25</publishTime>
+    </File>
+    <File Include="Scripts/backbone/app.js">
+      <publishTime>04/06/2015 15:12:40</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/books/books.app.js">
+      <publishTime>04/07/2015 13:55:25</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/books/list/list.controller.js">
+      <publishTime>04/07/2015 13:54:51</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/books/list/list.view.js">
+      <publishTime>04/07/2015 13:54:58</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/books/list/templates/layout.html">
+      <publishTime>04/07/2015 13:55:06</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/films/films.app.js">
+      <publishTime>04/07/2015 13:51:51</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/films/list/list.controller.js">
+      <publishTime>04/07/2015 13:52:05</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/films/list/list.view.js">
+      <publishTime>04/07/2015 13:52:01</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/films/list/templates/layout.html">
+      <publishTime>04/07/2015 13:52:23</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/header/header.app.js">
+      <publishTime>04/07/2015 14:35:19</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/header/list/list.controller.js">
+      <publishTime>04/06/2015 14:19:47</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/header/list/list.view.js">
+      <publishTime>04/06/2015 14:19:47</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/header/list/templates/header.html">
+      <publishTime>04/06/2015 14:19:47</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/header/show/show.controller.js">
+      <publishTime>04/07/2015 13:18:11</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/header/show/show.view.js">
+      <publishTime>04/07/2015 13:32:30</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/header/show/templates/layout.html">
+      <publishTime>04/07/2015 13:48:56</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/home/home.app.js">
+      <publishTime>04/07/2015 13:21:07</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/home/show/show.controller.js">
+      <publishTime>04/07/2015 16:19:19</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/home/show/show.view.js">
+      <publishTime>04/07/2015 13:11:24</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/home/show/templates/layout.html">
+      <publishTime>04/07/2015 13:11:35</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/settings/list/list.controller.js">
+      <publishTime>04/07/2015 13:57:03</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/settings/list/list.view.js">
+      <publishTime>04/07/2015 13:56:59</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/settings/list/templates/layout.html">
+      <publishTime>04/07/2015 13:57:11</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/settings/settings.app.js">
+      <publishTime>04/07/2015 13:56:47</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/study/list/list.controller.js">
+      <publishTime>04/07/2015 13:41:23</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/study/list/list.view.js">
+      <publishTime>04/07/2015 13:41:50</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/study/list/templates/layout.html">
+      <publishTime>04/07/2015 13:44:51</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/study/study.app.js">
+      <publishTime>04/07/2015 13:42:38</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/words/list/list.controller.js">
+      <publishTime>04/07/2015 13:44:38</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/words/list/list.view.js">
+      <publishTime>04/07/2015 13:44:29</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/words/list/templates/layout.html">
+      <publishTime>04/07/2015 13:44:36</publishTime>
+    </File>
+    <File Include="Scripts/backbone/apps/words/words.app.js">
+      <publishTime>04/07/2015 13:44:14</publishTime>
+    </File>
+    <File Include="Scripts/backbone/config/app.js">
+      <publishTime>04/07/2015 12:38:08</publishTime>
+    </File>
+    <File Include="Scripts/backbone/config/backbone/backbone.model.js">
+      <publishTime>04/06/2015 15:01:34</publishTime>
+    </File>
+    <File Include="Scripts/backbone/config/backbone/sync.js">
+      <publishTime>04/06/2015 14:19:48</publishTime>
+    </File>
+    <File Include="Scripts/backbone/config/marionette/application.js">
+      <publishTime>04/07/2015 13:36:06</publishTime>
+    </File>
+    <File Include="Scripts/backbone/config/marionette/renderer.js">
+      <publishTime>04/06/2015 14:19:48</publishTime>
+    </File>
+    <File Include="Scripts/backbone/config/marionette/router.js">
+      <publishTime>04/06/2015 14:19:48</publishTime>
+    </File>
+    <File Include="Scripts/backbone/controllers/_base.js">
+      <publishTime>04/07/2015 12:38:00</publishTime>
+    </File>
+    <File Include="Scripts/backbone/entities/user.js">
+      <publishTime>04/06/2015 15:15:24</publishTime>
+    </File>
+    <File Include="Scripts/backbone/entities/_base/_fetch.js">
+      <publishTime>04/06/2015 15:05:18</publishTime>
+    </File>
+    <File Include="Scripts/backbone/views/_base/collectionview.js">
+      <publishTime>04/06/2015 15:14:23</publishTime>
+    </File>
+    <File Include="Scripts/backbone/views/_base/compositeview.js">
+      <publishTime>04/06/2015 15:14:20</publishTime>
+    </File>
+    <File Include="Scripts/backbone/views/_base/itemview.js">
+      <publishTime>04/06/2015 15:14:14</publishTime>
+    </File>
+    <File Include="Scripts/backbone/views/_base/layout.js">
+      <publishTime>04/06/2015 15:14:09</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>04/04/2015 15:34:31</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
       <publishTime>04/04/2015 15:34:30</publishTime>
+    </File>
+    <File Include="Scripts/init.js">
+      <publishTime>04/07/2015 15:51:06</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>04/04/2015 15:34:31</publishTime>
@@ -209,6 +461,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
       <publishTime>04/04/2015 15:34:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.3.js">
+      <publishTime>04/06/2015 15:12:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.3.min.js">
+      <publishTime>04/06/2015 15:12:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery.dropotron.min.js">
+      <publishTime>04/04/2015 16:51:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>04/04/2015 16:51:34</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>04/04/2015 15:34:57</publishTime>
@@ -225,14 +489,41 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>04/04/2015 15:34:44</publishTime>
     </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>04/06/2015 14:10:36</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>04/06/2015 14:10:36</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>04/06/2015 14:10:36</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>04/06/2015 14:10:36</publishTime>
+    </File>
     <File Include="Scripts/respond.js">
       <publishTime>04/04/2015 15:34:45</publishTime>
     </File>
     <File Include="Scripts/respond.min.js">
       <publishTime>04/04/2015 15:34:45</publishTime>
     </File>
+    <File Include="Scripts/skel-layers.js">
+      <publishTime>04/07/2015 15:50:00</publishTime>
+    </File>
+    <File Include="Scripts/skel-layers.min.js">
+      <publishTime>04/04/2015 16:51:34</publishTime>
+    </File>
+    <File Include="Scripts/skel.min.js">
+      <publishTime>04/04/2015 16:51:34</publishTime>
+    </File>
+    <File Include="Scripts/underscore.js">
+      <publishTime>04/06/2015 15:12:25</publishTime>
+    </File>
+    <File Include="Scripts/underscore.min.js">
+      <publishTime>04/06/2015 15:12:25</publishTime>
+    </File>
     <File Include="Scripts/_references.js">
-      <publishTime>04/04/2015 15:34:44</publishTime>
+      <publishTime>04/06/2015 15:12:25</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
       <publishTime>04/04/2015 15:34:50</publishTime>
@@ -268,13 +559,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2015 15:34:20</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>04/04/2015 15:34:20</publishTime>
+      <publishTime>04/04/2015 17:00:11</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>04/04/2015 15:34:49</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/04/2015 15:34:49</publishTime>
+      <publishTime>04/07/2015 16:20:35</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>04/04/2015 15:34:50</publishTime>
@@ -286,7 +577,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2015 15:34:20</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/04/2015 15:47:52</publishTime>
+      <publishTime>04/06/2015 21:13:37</publishTime>
     </File>
   </ItemGroup>
 </Project>

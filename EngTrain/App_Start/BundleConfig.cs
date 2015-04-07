@@ -35,10 +35,14 @@ namespace EngTrain
         {
 
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
-                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery.min.js",
                 "~/Scripts/underscore.js",
                 "~/Scripts/backbone.js",
-                "~/Scripts/backbone.marionette.js"
+                "~/Scripts/backbone.marionette.js",
+                "~/Scripts/jquery.dropotron.min.js",
+                "~/Scripts/skel.min.js",
+                "~/Scripts/skel-layers.js",
+                "~/Scripts/init.js"
                 ));
 
             var templates = new Bundle("~/bundles/templates", new JsMinify()).IncludeDirectory("~/Scripts/backbone/", "*.html", true);
@@ -51,7 +55,7 @@ namespace EngTrain
                 .IncludeDirectory("~/Scripts/backbone/controllers", "*.js", true)
                 .IncludeDirectory("~/Scripts/backbone/views", "*.js", true)
                 .IncludeDirectory("~/Scripts/backbone/entities", "*.js", true)
-                .IncludeDirectory("~/Scripts/backbone/components", "*.js", true)
+                //.IncludeDirectory("~/Scripts/backbone/components", "*.js", true)
                 .IncludeDirectory("~/Scripts/backbone/apps", "*.js", true);
 
             appBundle.Orderer = new BundleOrderer();

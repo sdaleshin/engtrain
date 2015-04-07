@@ -7,14 +7,11 @@
             options || (options = {});
             this.region = options.region || App.request("default:region");
             base.constructor.call(this, options);
-            this._instance_id = _.uniqueId("controller");
-            App.execute("register:instance", this, this._instance_id)
         },
 
         destroy: function () {
             delete this.region
             delete this.options
-            App.execute("unregister:instance", this, this._instance_id);
             base.destroy.apply(this, arguments);
         },
 
