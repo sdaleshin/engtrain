@@ -178,7 +178,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -304,12 +303,17 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\backbone\components\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EngTrain.Models\EngTrain.Models.csproj">
+      <Project>{5edec615-f22b-4b3d-89fd-6de584320a31}</Project>
+      <Name>EngTrain.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TemplateBuilder\TemplateBuilder.csproj">
       <Project>{f253de98-6de9-40f4-919d-69a7034e8ebd}</Project>
       <Name>TemplateBuilder</Name>

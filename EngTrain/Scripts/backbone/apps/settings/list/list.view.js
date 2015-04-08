@@ -5,14 +5,19 @@ App.module('SettingsApp.List', function (List, App, Backbone, Marionette, $, _) 
         template: 'settings/list/layout',
         className: 'wrapper style2',
         events: {
-            'click .level-description':'onLevelDescriptionClick'
+            'click .level-description': 'onLevelDescriptionClick'
         },
         markSelectedLevel: function (level) {
             this.$('section').removeClass('selected');
             this.$('section[data-level=' + level + ']').addClass('selected');
         },
         onLevelDescriptionClick: function (e) {
-            this.markSelectedLevel(this.$(e.currentTarget).data('level'));
+            var level = this.$(e.currentTarget).data('level');
+            this.markSelectedLevel(level);
+            this.trigger('level:change', level);
+        },
+        onRender: function () {
+            this.markSelectedLevel(this.model.get('Level'));
         }
     });
 

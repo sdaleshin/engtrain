@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngTrain", "EngTrain\EngTra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateBuilder", "TemplateBuilder\TemplateBuilder.csproj", "{F253DE98-6DE9-40F4-919D-69A7034E8EBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngTrain.Models", "EngTrain.Models\EngTrain.Models.csproj", "{5EDEC615-F22B-4B3D-89FD-6DE584320A31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{F253DE98-6DE9-40F4-919D-69A7034E8EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F253DE98-6DE9-40F4-919D-69A7034E8EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F253DE98-6DE9-40F4-919D-69A7034E8EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EDEC615-F22B-4B3D-89FD-6DE584320A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EDEC615-F22B-4B3D-89FD-6DE584320A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EDEC615-F22B-4B3D-89FD-6DE584320A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EDEC615-F22B-4B3D-89FD-6DE584320A31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

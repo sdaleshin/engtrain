@@ -16,16 +16,19 @@ namespace EngTrain.Controllers
     public class AccountController : Controller
     {
         public AccountController()
-            : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
+            : this(new UserManager<User>(new UserStore<User>(new EngTrainContext())))
         {
         }
 
-        public AccountController(UserManager<ApplicationUser> userManager)
+        public AccountController(UserManager<User> userManager)
         {
             UserManager = userManager;
+            UserManager.UserValidator = new UserValidator<User>(UserManager) { AllowOnlyAlphanumericUserNames = false };
+            context = new EngTrainContext();
         }
 
-        public UserManager<ApplicationUser> UserManager { get; private set; }
+        public UserManager<User> UserManager { get; private set; }
+        public EngTrainContext context { get; private set; }
 
         //
         // GET: /Account/Login
@@ -73,26 +76,30 @@ namespace EngTrain.Controllers
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
+            var user = new User() { UserName = model.UserName, Level = Models.Enums.Level.Intermediate };
+            var result = await UserManager.CreateAsync(user);
+            if (result.Succeeded)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-                    await SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    AddErrors(result);
-                }
+                await SignInAsync(user, isPersistent: false);
+                return Json(new { UserName = user.UserName, Id = user.Id });
+            }
+            else
+            {
+                AddErrors(result);
             }
 
             // Появление этого сообщения означает наличие ошибки; повторное отображение формы
             return View(model);
+        }
+
+        [HttpPut]
+        public async void ChangeLevel(User model)
+        {
+            var user = context.Users.FirstOrDefault(s => s.Id == model.Id);
+            user.Level = model.Level;
+            context.SaveChanges();
         }
 
         //
@@ -265,7 +272,7 @@ namespace EngTrain.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new User() { UserName = model.UserName };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
@@ -331,7 +338,7 @@ namespace EngTrain.Controllers
             }
         }
 
-        private async Task SignInAsync(ApplicationUser user, bool isPersistent)
+        private async Task SignInAsync(User user, bool isPersistent)
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
             var identity = await UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
@@ -378,7 +385,8 @@ namespace EngTrain.Controllers
 
         private class ChallengeResult : HttpUnauthorizedResult
         {
-            public ChallengeResult(string provider, string redirectUri) : this(provider, redirectUri, null)
+            public ChallengeResult(string provider, string redirectUri)
+                : this(provider, redirectUri, null)
             {
             }
 
