@@ -95,7 +95,7 @@ namespace EngTrain.Controllers
         }
 
         [HttpPut]
-        public async void ChangeLevel(User model)
+        public void ChangeLevel(User model)
         {
             var user = context.Users.FirstOrDefault(s => s.Id == model.Id);
             user.Level = model.Level;
