@@ -3,6 +3,8 @@
 
     Show.Controller = App.Controllers.Base.extend({
         initialize: function (options) {
+            localStorage.clear();
+            App.user = null;
             this.layoutView = this.getLayoutView();
             this.show(this.layoutView);
             $('body').addClass('homepage');
