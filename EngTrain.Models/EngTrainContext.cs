@@ -11,9 +11,12 @@ namespace EngTrain.Models
         {
         }
 
+        public IDbSet<Word> Words { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new WordMap());
 
         }
     }
